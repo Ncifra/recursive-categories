@@ -1,0 +1,36 @@
+{
+  "name": "test",
+  "jest": {
+    "setupFiles": [
+      "./models/index.js"
+    ]
+  },
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "debug": "nodemon -L --inspect=0.0.0.0:9229 ./bin/www",
+    "start:migration": "sh ./docker-entrypoint.sh",
+    "db:migrate": "npx sequelize-cli db:migrate",
+    "db:seed": "npx sequelize-cli db:seed:all",
+    "test": "jest --watchAll"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "express": "~4.16.1",
+    "morgan": "~1.9.1",
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.6.5",
+    "sequelize-mock": "^0.10.2",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "devDependencies": {
+    "jest": "^27.1.0",
+    "sequelize-cli": "^6.2.0",
+    "supertest": "^6.1.6",
+    "nodemon": "^2.0.12"
+  }
+}
