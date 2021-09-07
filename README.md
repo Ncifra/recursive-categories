@@ -13,3 +13,5 @@ First rename .env.example to .env (it is used for the tests) and then run:
 npm install
 npm test
 ```
+
+Swagger to test also available on `/swagger`. I have set it up statically through JSON so it assumes that the API is on `localhost:3000`
